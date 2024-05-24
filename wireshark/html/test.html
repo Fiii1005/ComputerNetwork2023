@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<html>
+    <title>这是一个网页</title>
+    <body>
+        <p style="text-align:center;">姓名：谢雯菲</p>
+        <p style="text-align:center;">学号：2110803</p>
+        <p style="text-align:center;">专业：信息安全</p>
+    </body>
+    <p style="text-align:center;">
+        <img src="picture.jpg" height="200" width="200" style="display: inline-block; vertical-align: middle;" />
+    </p>
+    <audio id="myAudio" src="music1.mp3" type="audio/mpeg"></audio>
+    <p style="text-align:center;">
+        <button id="playButton" onclick="togglePlay()">播放</button>
+    </p>
+    <script>
+        var audio = document.getElementById("myAudio");
+        var playButton = document.getElementById("playButton");
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playButton.innerHTML = "暂停";
+            } else {
+                audio.pause();
+                playButton.innerHTML = "播放";
+            }
+        }
+    </script>
+</html>
